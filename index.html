@@ -1,55 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="theme-color" content="#282828" />
+    <meta name="theme-color" content="#282828" />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- TODO Set real domain name
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- TODO Set real domain name
         <base href="https://example.com/page.html"> -->
-        <!-- TODO add page description -->
-        <meta
-            name="description"
-            content="'Umytly Teklip'- Ведущая компания по сервисному обслуживанию медицинского оборудования в Туркменистане"
+    <!-- TODO add page description -->
+    <meta
+      name="description"
+      content="'MP Building'- Строительство котеджей и домов в Туркменистане"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="format-detection" content="phone=no" />
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
+    <!-- * Google -->
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="notranslate" />
+    <!-- * Geo placement -->
+    <meta name="geo.region" content="TM-S" />
+    <meta name="geo.placename" content="Ашхабад" />
+    <meta name="geo.position" content="37.940465;58.382349" />
+    <meta name="ICBM" content="37.940465, 58.382349" />
+    <link
+      rel="search"
+      href="helpers/open-search.xml"
+      type="application/opensearchdescription+xml"
+      title="MP Building"
+    />
+    <!-- Apple browsers -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Icons -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/favicons/favicon.ico"
+    />
+    <link rel="apple-touch-iconF" href="/img/favicons/apple-icon-180x180.png" />
+    <!-- * Styles -->
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <title>MP Building</title>
+  </head>
+  <body>
+    <!-- * HEADER -->
+    <header class="header" id="header">
+      <!-- TODO made it <picture> -->
+      <a href="#header">
+        <img
+          src="img/small-logo.webp"
+          class="header__logo"
+          alt="Логотип компании 'MP Building'"
         />
-        <meta name="robots" content="index,follow" />
-        <meta name="format-detection" content="phone=no" />
-        <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
-        <!-- * Google -->
-        <meta name="googlebot" content="index,follow" />
-        <meta name="google" content="notranslate" />
-        <!-- * Geo placement -->
-        <meta name="geo.region" content="TM-S" />
-        <meta name="geo.placename" content="Ашхабад" />
-        <meta name="geo.position" content="37.940465;58.382349" />
-        <meta name="ICBM" content="37.940465, 58.382349" />
-        <link
-            rel="search"
-            href="helpers/open-search.xml"
-            type="application/opensearchdescription+xml"
-            title="Umytly Teklip"
+      </a>
+      <nav class="header__nav">
+        <a class="third after" href="#header">О компании</a>
+        <a class="third after" href="#conception">Концепция</a>
+        <a class="third after" href="#projects">Проекты</a>
+        <a class="third after" href="#why-we">Почему мы</a>
+        <a class="third after" href="#contacts">Контакты</a>
+        <a href="#header">
+          <img
+            src="img/Language-logo.svg"
+            class="header__logo-lang"
+            alt="Выбор языка"
+          />
+        </a>
+      </nav>
+    </header>
+    <!-- * Welcome container -->
+    <section class="welcome__container">
+      <div class="welcome__img">
+        <img
+          src="img/house-bg.webp"
+          style="width: 100%"
+          alt="Строительство домов и коттеджей'"
         />
-        <!-- Apple browsers -->
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <!-- Icons -->
-        <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="img/favicons/favicon.ico"
-        />
-        <link
-            rel="apple-touch-iconF"
-            href="/img/favicons/apple-icon-180x180.png"
-        />
-        <!-- * Styles -->
-        <link rel="stylesheet" href="style/normalize.css" />
-        <link rel="stylesheet" href="style/index.css" />
-        <title>MP Building</title>
-    </head>
-    <body>
-
-    </body>
+      </div>
+      <div class="welcome__title"><h1>Строительство домов и коттеджей</h1></div>
+      <span class="welcome__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+        explicabo ea a beatae voluptatem minus tenetur perspiciatis quas
+        incidunt odit laudantium veniam possimus saepe voluptatibus unde totam
+        laborum iure consequuntur.
+      </span>
+      <button class="welcome__button">Оставить заявку</button>
+    </section>
+  </body>
 </html>
