@@ -83,7 +83,7 @@ html {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: var(--black);
   transition: 0.2s;
   transform: scaleX(0);
 }
@@ -103,14 +103,12 @@ html {
   width: 100%;
   height: 50em;
   align-items: center;
-  background: url("../img/house-bg.webp") no-repeat;
-  background-position: top, center;
-  background-size: 100%;
+  background: url("../img/house-bg.webp") no-repeat center center;
+  background-size: cover;
 }
 
 .about-us__title {
   width: 23em;
-  font-weight: 700;
   font-size: 2.5em;
   text-align: center;
   color: var(--white);
@@ -118,9 +116,8 @@ html {
 }
 
 .about-us__text {
-  width: 800px;
+  width: 30em;
   font-family: "Montserrat-regular", sans-serif;
-  font-weight: 1.5em;
   font-size: 1.5em;
   text-align: center;
   color: var(--white);
@@ -130,9 +127,8 @@ html {
   width: 14em;
   height: 3em;
   border-radius: 4em;
-  border: none;
+  border: 4em, none;
   background: var(--white);
-  font-weight: bold;
   font-size: 1.2em;
   text-align: center;
   color: var(--black);
