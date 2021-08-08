@@ -127,7 +127,7 @@ html {
   width: 14em;
   height: 3em;
   border-radius: 4em;
-  border: 4em, none;
+  border: none;
   background: var(--white);
   font-size: 1.2em;
   text-align: center;
