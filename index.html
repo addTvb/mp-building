@@ -44,6 +44,7 @@
     <!-- * Styles -->
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/burger.css" />
     <title>MP Building</title>
   </head>
   <body>
@@ -66,19 +67,27 @@
         <a class="header__nav-link" href="#projects">Проекты</a>
         <a class="header__nav-link" href="#why-we">Почему мы</a>
         <a class="header__nav-link" href="#contacts">Контакты</a>
-        <input type="checkbox" id="checkbox" class="mobile-menu__checkbox" />
-        <label for="checkbox" class="mobile-menu__btn">
-        <div class="mobile-menu__icon"></div>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
         </label>
-        <div class="mobile-menu__container">
-          <ul class="mobile-menu__list">
-            <a href="#" class="mobile-menu__link">О компании</a>
-            <a href="#" class="mobile-menu__link">Концепция</a>
-            <a href="#" class="mobile-menu__link">Проекты</a>
-            <a href="#" class="mobile-menu__link">Почему мы</a>
-            <a href="#" class="mobile-menu__link">Контакты</a>
-          </ul>
-        </div>
+        <ul class="menu__box">
+          <li>
+            <a class="menu__item" href="#about-us"> О компании</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#conception"> Концепция </a>
+          </li>
+          <li>
+            <a class="menu__item" href="#projects"> Проекты </a>
+          </li>
+          <li>
+            <a class="menu__item" href="#why-we"> Почему мы </a>
+          </li>
+          <li>
+            <a class="menu__item" href="#contacts"> Контакты </a>
+          </li>
+        </ul>
       </nav>
       <div class="header__lang-wrapper">
         <a href="#">
@@ -104,4 +113,5 @@
       <button class="about-us__button">Оставить заявку</button>
     </section>
   </body>
+  <script src="js/burger.js"></script>
 </html>
