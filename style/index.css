@@ -108,8 +108,8 @@ html {
 }
 .about-us__title {
   width: auto;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 28%;
+  margin-right: 28%;
   font-size: 4.5em;
   text-align: center;
   color: var(--white);
@@ -227,6 +227,24 @@ html {
   -webkit-transform: rotate(45deg);
 }
 /* MEDIA QUERIES */
+@media (max-width: 1740px) {
+  /* Header 1740px */
+  .header__logo {
+    width: 4.5em;
+  }
+  .header__lang {
+    width: 1.5em;
+  }
+  /* About 1740px */
+  .about-us__title {
+    margin-right: 27%;
+    margin-left: 27%;
+  }
+  .about-us__text {
+    margin-right: 26%;
+    margin-left: 26%;
+  }
+}
 @media (max-width: 1450px) {
   /* Header 1450px */
   .header__logo {
@@ -237,16 +255,16 @@ html {
   }
   /* About 1450px */
   .about-us__title {
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 23%;
+    margin-left: 23%;
   }
   .about-us__text {
-    margin-right: 19%;
-    margin-left: 19%;
+    margin-right: 22%;
+    margin-left: 22%;
   }
 }
-@media (max-width: 1020px) {
-  /* Header 1020px */
+@media (max-width: 1125px) {
+  /* Header 1125px */
   .header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -284,15 +302,15 @@ html {
   .header__nav > a {
     display: none;
   }
-  /* About 1020px */
+  /* About 1125px */
   .about-us__title {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
     font-size: 3.5em;
   }
   .about-us__text {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 19%;
+    margin-left: 19%;
     font-size: 1.2em;
   }
   .about-us__button {
@@ -314,9 +332,13 @@ html {
   }
   /* About 620px */
   .about-us__title {
+    margin-right: 18%;
+    margin-left: 18%;
     font-size: 3em;
   }
   .about-us__text {
+    margin-right: 17%;
+    margin-left: 17%;
     font-size: 1em;
   }
   .about-us__button {
@@ -325,8 +347,32 @@ html {
   }
 }
 
-@media (max-width: 530px) {
-  /* Header 530px */
+  @media (max-width: 530px) {
+    /* Header 530px */
+    .header__logo {
+      width: 3.5em;
+    }
+    .header__lang {
+      width: 1.5em;
+    }
+    .header__nav > a {
+      display: none;
+    }
+    /* About 530px */
+    .about-us__title {
+      font-size: 2.5em;
+    }
+    .about-us__text {
+      font-size: 1em;
+    }
+    .about-us__button {
+      font-size: 0.8em;
+      margin-top: 1em;
+    }
+  }
+
+@media (max-width: 400px) {
+  /* Header 400px */
   .header__logo {
     width: 3.5em;
   }
@@ -336,12 +382,16 @@ html {
   .header__nav > a {
     display: none;
   }
-  /* About 530px */
+  /* About 400px */
   .about-us__title {
-    font-size: 2.5em;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1.5em;
   }
   .about-us__text {
-    font-size: 1em;
+    margin-right: 4%;
+    margin-left: 4%;
+    font-size: 0.8em;
   }
   .about-us__button {
     font-size: 0.8em;
