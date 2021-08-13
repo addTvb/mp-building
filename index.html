@@ -12,7 +12,7 @@
     <!-- TODO add page description -->
     <meta
       name="description"
-      content="'MP Building'- Строительство коттеджей и домов в Туркменистане"
+      content="'MP build'- Строительство коттеджей и домов в Туркменистане"
     />
     <meta name="robots" content="index,follow" />
     <meta name="format-detection" content="phone=no" />
@@ -29,7 +29,7 @@
       rel="search"
       href="helpers/open-search.xml"
       type="application/opensearchdescription+xml"
-      title="MP Building"
+      title="MP build"
     />
     <!-- Apple browsers -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/burger.css" />
-    <title>MP Building</title>
+    <title>MP build</title>
   </head>
   <body>
     <!-- * HEADER -->
@@ -55,8 +55,7 @@
           <img
             src="img/small-logo.webp"
             class="header__logo"
-            alt="Логотип компании 'MP Building'"
-            loading="lazy"
+            alt="Логотип компании 'MP build'"
             width="5.5em"
           />
         </a>
@@ -95,14 +94,12 @@
             src="img/Language-logo.svg"
             class="header__lang"
             alt="Поменять язык сайта"
-            loading="lazy"
           />
         </a>
       </div>
     </header>
     <!-- * About us container -->
-    <!-- Такие большие контейнеры должны быть не div а section -->
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <h1 class="about-us__title">Строительство домов и коттеджей</h1>
       <p class="about-us__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
@@ -111,6 +108,81 @@
         laborum iure consequuntur.
       </p>
       <button class="about-us__button">Оставить заявку</button>
+    </section>
+    <!-- * concept container -->
+    <section class="concept" id="concept">
+      <div class="concept__wrapper-flex">
+        <h2 class="concept__title-main">Концепция</h2>
+        <p class="concept__subtitle-main">
+          Мы расскажем вам почему нужно работать именно с нами, и как это будет
+        </p>
+      </div>
+      <div class="concept__wrapper-grid">
+        <img
+          src="img/concept/conception_1.webp"
+          alt="Консультация"
+          class="concept__consult concept__img"
+          width="720px"
+          loading="lazy"
+        />
+        <div class="concept__consult concept__wrapper">
+          <h3 class="concept__consult concept__title">Консультация</h3>
+          <p class="concept__consult concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_2.webp"
+          alt="Проектирование"
+          class="concept__project concept__img"
+          width="720px"
+          loading="lazy"
+        />
+        <div class="concept__project concept__wrapper">
+          <h3 class="concept__project concept__title">Проектирование</h3>
+          <p class="concept__project concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_3.webp"
+          alt="Строительство"
+          class="concept__build concept__img"
+          width="720px"
+          loading="lazy"
+        />
+        <div class="concept__build concept__wrapper">
+          <h3 class="concept__build concept__title">Строительство</h3>
+          <p class="concept__build concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_4.webp"
+          alt="Проектирование"
+          class="concept__end concept__img"
+          width="720px"
+          loading="lazy"
+        />
+        <div class="concept__end concept__wrapper">
+          <h3 class="concept__end concept__title">Завершение проекта</h3>
+          <p class="concept__end concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+      </div>
     </section>
   </body>
   <script src="js/burger.js"></script>

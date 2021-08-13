@@ -1,3 +1,11 @@
+/* COLOR VARIABLES */
+:root {
+  --white: #fff;
+  --black: #000;
+  --milky-white: #fafafa;
+  --grey: #8d8d8d;
+  --light-grey: #f9f9f9;
+}
 /* FONTS */
 @font-face {
   font-family: "Montserrat";
@@ -27,12 +35,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-/* COLOR VARIABLES */
-:root {
-  --white: #fff;
-  --black: #000;
-  --milky-white: #fafafa;
 }
 
 html {
@@ -132,6 +134,98 @@ html {
 .about-us__button:hover {
   cursor: pointer;
   transition: 0.2s;
+}
+/* concept */
+.concept {
+  background-color: var(--light-grey);
+}
+.concept__wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.concept__title-main {
+  width: auto;
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-bottom: 0;
+  margin-top: 3em;
+  font-size: 3em;
+  text-align: center;
+  color: var(--black);
+}
+.concept__subtitle-main {
+  width: auto;
+  margin-left: 27%;
+  margin-right: 27%;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-family: "Montserrat-Thin", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--grey);
+}
+.concept__wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.concept__project.concept__img,
+.concept__project.concept__title,
+.concept__project.concept__text {
+  grid-row: 2/3;
+}
+.concept__project.concept__title,
+.concept__project.concept__text,
+.concept__end.concept__title,
+.concept__end.concept__text {
+  grid-column: 1/2;
+}
+.concept__build.concept__img,
+.concept__build.concept__title,
+.concept__build.concept__text {
+  grid-row: 3/4;
+}
+.concept__build.concept__title,
+.concept__build.concept__text {
+  grid-column: 2/3;
+}
+.concept__end.concept__img,
+.concept__end.concept__title,
+.concept__end.concept__text {
+  grid-row: 4/5;
+}
+.concept__consult.concept__img,
+.concept__build.concept__img {
+  grid-column: 1/2;
+}
+.concept__project.concept__img,
+.concept__end.concept__img {
+  grid-column: 2/3;
+}
+.concept__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.concept__title {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+.concept__text {
+  font-size: 1.5em;
+  font-family: "Montserrat-Regular", sans-serif;
+  margin: 0;
+  padding-top: 1.5em;
+  margin-right: 9.5em;
+  margin-left: 9.5em;
+}
+.concept__img {
+  width: 100%;
 }
 
 /* MEDIA QUERIES */
