@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/burger.css" />
+    <link rel="stylesheet" href="style/full-page-scroll.min.css" />
     <title>MP build</title>
   </head>
   <body>
@@ -62,7 +63,7 @@
       </div>
       <nav class="header__nav">
         <a class="header__nav-link" href="#about-us">О компании</a>
-        <a class="header__nav-link" href="#conception">Концепция</a>
+        <a class="header__nav-link" href="#concept">Концепция</a>
         <a class="header__nav-link" href="#projects">Проекты</a>
         <a class="header__nav-link" href="#why-we">Почему мы</a>
         <a class="header__nav-link" href="#contacts">Контакты</a>
@@ -75,7 +76,7 @@
             <a class="menu__item" href="#about-us"> О компании</a>
           </li>
           <li>
-            <a class="menu__item" href="#conception"> Концепция </a>
+            <a class="menu__item" href="#concept"> Концепция </a>
           </li>
           <li>
             <a class="menu__item" href="#projects"> Проекты </a>
@@ -107,7 +108,9 @@
         incidunt odit laudantium veniam possimus saepe voluptatibus unde totam
         laborum iure consequuntur.
       </p>
-      <button class="about-us__button">Оставить заявку</button>
+      <button class="about-us__button" data-hover="Спасибо!">
+        <div>Оставить заявку</div>
+      </button>
     </section>
     <!-- * concept container -->
     <section class="concept" id="concept">

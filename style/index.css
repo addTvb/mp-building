@@ -122,18 +122,44 @@ html {
   color: var(--white);
 }
 .about-us__button {
-  padding: 1em 2.5em;
+  position: relative;
+  padding: 1em 1.5em;
   border-radius: 4em;
   border: none;
   background: var(--white);
   font-size: 1.2em;
+  font-family: "Montserrat-Bold", sans-serif;
   text-align: center;
   color: var(--black);
   margin-top: 4em;
 }
 .about-us__button:hover {
   cursor: pointer;
-  transition: 0.2s;
+}
+.about-us__button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about-us__button:before {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-weight: 800;
+  font-size: 1.2em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.about-us__button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+.about-us__button div {
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
 }
 /* concept */
 .concept {
@@ -212,17 +238,19 @@ html {
   text-align: center;
 }
 .concept__title {
+  width: auto;
   font-size: 3em;
   padding: 0;
   margin: 0;
 }
 .concept__text {
+  width: auto;
   font-size: 1.5em;
   font-family: "Montserrat-Regular", sans-serif;
   margin: 0;
   padding-top: 1.5em;
-  margin-right: 9.5em;
-  margin-left: 9.5em;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 .concept__img {
   width: 100%;
@@ -272,6 +300,43 @@ html {
     font-size: 1.1em;
     margin-top: 2em;
   }
+  /* Concept 1125px */
+  .concept__title-main {
+    font-size: 2.5em;
+  }
+  .concept__subtitle-main {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2em;
+  }
+  .concept__title {
+    font-size: 2.5em;
+  }
+  .concept__text {
+    font-size: 1.2em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 790px) {
+  /* Concept 1125px */
+  .concept__title-main {
+    font-size: 2.2em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.8em;
+  }
+  .concept__title {
+    font-size: 2em;
+  }
+  .concept__text {
+    font-size: 1em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -290,6 +355,23 @@ html {
     font-size: 1em;
     margin-top: 1.2em;
   }
+  /* Concept 1125px */
+  .concept__title-main {
+    font-size: 1.8em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.2em;
+  }
+  .concept__title {
+    font-size: 1.5em;
+  }
+  .concept__text {
+    font-size: 0.8em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
 }
 
 @media (max-width: 530px) {
@@ -307,6 +389,23 @@ html {
   .about-us__button {
     font-size: 0.8em;
     margin-top: 1em;
+  }
+  /* Concept 1125px */
+  .concept__title-main {
+    font-size: 1.5em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1em;
+  }
+  .concept__title {
+    font-size: 1.2em;
+  }
+  .concept__text {
+    font-size: 0.6em;
+    margin-right: 20%;
+    margin-left: 20%;
   }
 }
 
