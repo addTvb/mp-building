@@ -270,29 +270,25 @@ html {
 .why-we__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 11em 6em 8em;
+  grid-template-rows: 0.5fr 0.2fr 0.3fr;
+  font-family: "Montserrat-Regular", sans-serif;
 }
 .why-we__img {
   grid-row: 1/2;
-  align-self: center;
   justify-self: center;
 }
 .why-we__subtitle {
   grid-row: 2/3;
-  align-self: start;
   text-align: center;
   font-size: 2em;
-  font-family: "Montserrat-Regular", sans-serif;
-  margin: 0.8em 28% 0 28%;
+  margin: 3.2% 23% 0% 23%;
 }
 .why-we__text {
   grid-row: 3/4;
-  align-self: start;
   text-align: center;
   font-size: 1.5em;
-  font-family: "Montserrat-Regular", sans-serif;
   color: var(--grey);
-  margin: 0.8em 20% 0 20%;
+  margin: 1.5% 20% 0 20%;
 }
 
 /* MEDIA QUERIES */
@@ -356,10 +352,19 @@ html {
     margin-right: 20%;
     margin-left: 20%;
   }
+  /* Why-we 1125px */
+  .why-we__subtitle {
+    font-size: 1.8em;
+    margin: 3.2% 15% 0% 15%;
+  }
+  .why-we__text {
+    font-size: 1.2em;
+    margin: 1.5% 20% 0 20%;
+  }
 }
 
 @media (max-width: 790px) {
-  /* Concept 1125px */
+  /* Concept 790px */
   .concept__title-main {
     font-size: 2.2em;
   }
@@ -375,6 +380,18 @@ html {
     font-size: 1em;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  /* Why-we 790px */
+  .why-we__title {
+    font-size: 3em;
+  }
+  .why-we__subtitle {
+    font-size: 1.3em;
+    margin: 8% 10% 0% 10%;
+  }
+  .why-we__text {
+    font-size: 1em;
+    margin: 4% 20% 0 20%;
   }
 }
 
@@ -394,7 +411,7 @@ html {
     font-size: 1em;
     margin-top: 1.2em;
   }
-  /* Concept 1125px */
+  /* Concept 620px */
   .concept__title-main {
     font-size: 1.8em;
   }
@@ -410,6 +427,27 @@ html {
     font-size: 0.8em;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  /* Why-we 620px */
+  .why-we__title {
+    font-size: 2.5em;
+  }
+  .why-we__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .why-we__img {
+    width: 10em;
+  }
+  .why-we__subtitle {
+    font-size: 2em;
+    margin: 2% 10% 0% 10%;
+  }
+  .why-we__text {
+    font-size: 1.5em;
+    margin: 3% 20% 3% 20%;
   }
 }
 
@@ -429,7 +467,7 @@ html {
     font-size: 0.8em;
     margin-top: 1em;
   }
-  /* Concept 1125px */
+  /* Concept 530px */
   .concept__title-main {
     font-size: 1.5em;
   }
@@ -445,6 +483,27 @@ html {
     font-size: 0.6em;
     margin-right: 20%;
     margin-left: 20%;
+  }
+  /* Why-we 530px */
+  .why-we__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .why-we__title {
+    font-size: 2em;
+  }
+  .why-we__img {
+    width: 10em;
+  }
+  .why-we__subtitle {
+    font-size: 1.5em;
+    margin: 2% 10% 0% 10%;
+  }
+  .why-we__text {
+    font-size: 1.2em;
+    margin: 3% 20% 3% 20%;
   }
 }
 
@@ -463,5 +522,20 @@ html {
   .about-us__button {
     font-size: 0.8em;
     margin-top: 1em;
+  }
+  /* Why-we 400px */
+  .why-we__title {
+    font-size: 2em;
+  }
+  .why-we__img {
+    width: 8em;
+  }
+  .why-we__subtitle {
+    font-size: 1.5em;
+    margin: 2% 10% 0% 10%;
+  }
+  .why-we__text {
+    font-size: 1em;
+    margin: 3% 20% 3% 20%;
   }
 }
