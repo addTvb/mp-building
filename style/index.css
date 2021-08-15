@@ -100,6 +100,7 @@ html {
   width: 100%;
   height: 100vh;
   align-items: center;
+  background-color: var(--grey);
   background: url("../img/about-us/house-bg.webp") no-repeat center center;
   background-size: cover;
 }
@@ -402,7 +403,9 @@ html {
   }
   .why-we__img {
     width: 10em;
-    margin-top: 20px;
+  }
+  .why-we__img#margin {
+    margin-top: 8em;
   }
   .why-we__main {
     font-size: 2em;
@@ -451,6 +454,9 @@ html {
   }
   .why-we__img {
     width: 8em;
+  }
+  .why-we__img#margin {
+    margin-top: 8em;
   }
   .why-we__main {
     font-size: 1.5em;
@@ -517,6 +523,9 @@ html {
   }
   .why-we__img {
     width: 7em;
+  }
+  .why-we__img#margin {
+    margin-top: 7em;
   }
   .why-we__main {
     font-size: 1.2em;
