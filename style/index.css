@@ -95,7 +95,6 @@ html {
 .about-us {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -252,10 +251,16 @@ html {
   width: 100%;
 }
 
-/* ARSLAN */
-.arslan {
+/* PROJECTS */
+.projects {
   height: 793px;
   background-color: var(--grey);
+}
+.projects__title {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  color: var(--white);
 }
 
 /* WHY-WE */
@@ -268,6 +273,7 @@ html {
   margin-bottom: 1em;
 }
 .why-we__wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 0.5fr 0.2fr 0.3fr;
@@ -281,14 +287,14 @@ html {
   grid-row: 2/3;
   text-align: center;
   font-size: 2em;
-  margin: 3.2% 23% 0% 23%;
+  margin: 20px 23% 0% 23%;
 }
 .why-we__text {
   grid-row: 3/4;
   text-align: center;
   font-size: 1.5em;
   color: var(--grey);
-  margin: 1.5% 20% 0 20%;
+  margin: 10px 20% 0 20%;
 }
 
 /* MEDIA QUERIES */
@@ -353,13 +359,16 @@ html {
     margin-left: 20%;
   }
   /* Why-we 1125px */
+  .why-we__img {
+    width: 8em;
+  }
   .why-we__subtitle {
     font-size: 1.8em;
-    margin: 3.2% 15% 0% 15%;
+    margin: 20px 15% 0% 15%;
   }
   .why-we__text {
     font-size: 1.2em;
-    margin: 1.5% 20% 0 20%;
+    margin: 10px 20% 0 20%;
   }
 }
 
@@ -385,13 +394,16 @@ html {
   .why-we__title {
     font-size: 3em;
   }
+  .why-we__img {
+    width: 8em;
+  }
   .why-we__subtitle {
     font-size: 1.3em;
-    margin: 8% 10% 0% 10%;
+    margin: 20px 10% 0% 10%;
   }
   .why-we__text {
     font-size: 1em;
-    margin: 4% 20% 0 20%;
+    margin: 10px 20% 0 20%;
   }
 }
 
@@ -439,15 +451,15 @@ html {
     align-items: center;
   }
   .why-we__img {
-    width: 10em;
+    width: 6em;
   }
   .why-we__subtitle {
-    font-size: 2em;
-    margin: 2% 10% 0% 10%;
+    font-size: 1.5em;
+    margin: 20px 10% 0% 10%;
   }
   .why-we__text {
-    font-size: 1.5em;
-    margin: 3% 20% 3% 20%;
+    font-size: 1.2em;
+    margin: 10px 20% 3% 20%;
   }
 }
 
@@ -495,15 +507,15 @@ html {
     font-size: 2em;
   }
   .why-we__img {
-    width: 10em;
+    width: 5em;
   }
   .why-we__subtitle {
-    font-size: 1.5em;
-    margin: 2% 10% 0% 10%;
+    font-size: 1.3em;
+    margin: 10px 10% 0% 10%;
   }
   .why-we__text {
-    font-size: 1.2em;
-    margin: 3% 20% 3% 20%;
+    font-size: 1em;
+    margin: 20px 20% 3% 20%;
   }
 }
 
@@ -528,14 +540,14 @@ html {
     font-size: 2em;
   }
   .why-we__img {
-    width: 8em;
+    width: 4em;
   }
   .why-we__subtitle {
-    font-size: 1.5em;
-    margin: 2% 10% 0% 10%;
+    font-size: 1.3em;
+    margin: 10px 10% 0% 10%;
   }
   .why-we__text {
     font-size: 1em;
-    margin: 3% 20% 3% 20%;
+    margin: 20px 20% 3% 20%;
   }
 }
