@@ -143,19 +143,19 @@
                 </label>
                 <ul class="menu__box">
                     <li>
-                        <a class="menu__item" href="#about-us"> О компании</a>
+                        <a class="menu__item" href="#about-us">О компании</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="#concept"> Концепция </a>
+                        <a class="menu__item" href="#concept">Концепция</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="#projects"> Проекты </a>
+                        <a class="menu__item" href="#projects">Проекты</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="#why-we"> Почему мы </a>
+                        <a class="menu__item" href="#why-we">Почему мы</a>
                     </li>
                     <li>
-                        <a class="menu__item" href="#contacts"> Контакты </a>
+                        <a class="menu__item" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -178,9 +178,9 @@
                 perspiciatis quas incidunt odit laudantium veniam possimus saepe
                 voluptatibus unde totam laborum iure consequuntur.
             </p>
-            <button class="about-us__button" data-hover="Спасибо!">
+            <a href="#contacts" class="about-us__button" data-hover="Спасибо!">
                 <div>Оставить заявку</div>
-            </button>
+            </a>
         </section>
         <!-- * concept container -->
         <section class="concept" id="concept">
@@ -312,9 +312,14 @@
         </section>
         <section class="contact-us">
             <!-- Объединить все title of sections в один класс -->
-            <h2 class="contact-us__title">Связаться с нами</h2>
+            <h2 class="contact-us__title" id="contacts">Связаться с нами</h2>
             <form netlify class="contact-us__form" name="contact-us">
-                <input type="text" name="name" placeholder="Введите имя" class="contact-us__input"/>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Введите имя"
+                    class="contact-us__input"
+                />
                 <input
                     type="email"
                     name="email"
@@ -327,7 +332,9 @@
                     placeholder="Введите номер телефона"
                     class="contact-us__input"
                 />
-                <button type="submit" class="contact-us__button">Отправить</button>
+                <button type="submit" class="contact-us__button">
+                    Отправить
+                </button>
             </form>
         </section>
     </body>
