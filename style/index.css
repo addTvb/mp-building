@@ -1,142 +1,536 @@
+/* COLOR VARIABLES */
+:root {
+  --white: #fff;
+  --black: #000;
+  --milky-white: #fafafa;
+  --grey: #8d8d8d;
+  --light-grey: #f9f9f9;
+}
 /* FONTS */
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    src: url(../fonts/Montserrat-Thin.ttf);
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(../fonts/Montserrat-Thin.ttf);
 }
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    src: url(../fonts/Montserrat-Regular.ttf);
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    src: url(../fonts/Montserrat-Medium.ttf);
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(../fonts/Montserrat-Medium.ttf);
 }
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    src: url(../fonts/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(../fonts/Montserrat-SemiBold.ttf);
 }
 @font-face {
-    font-family: "Montserrat";
-    font-display: swap;
-    src: url(../fonts/Montserrat-Bold.ttf);
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-}
-/* COLOR VARIABLES */
-:root {
-    --white: #fff;
-    --black: #000;
-    --milky-white: #fafafa;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
 .header {
-    /* * Вместо высота лучше задать paddint top и bottom */
-    /*! height: 9.5em; */
-    padding: 2em 0;
-    display: flex;
-    /* * flex-direction по умолчанию идет со значение row его можно не писать */
-    /*! flex-direction: row; */
-    align-items: center;
+  padding: 2em 0;
+  display: flex;
+  align-items: center;
+}
+.header__logo-wrapper {
+  margin-left: 4em;
 }
 .header__logo {
-    width: 5.5em;
-    margin-left: 4em;
+  width: 5.5em;
 }
-
 .header__nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.header__nav a {
-    cursor: pointer;
-    color: var(--black);
-    font-family: "Montserrat-regular", sans-serif;
-    margin-right: 3em;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: 0.2s;
+.header__nav-link {
+  cursor: pointer;
+  color: var(--black);
+  font-family: "Montserrat-regular", sans-serif;
+  margin-right: 3em;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: 0.2s;
 }
-
-.header__nav a {
-    text-decoration: none;
-    position: relative;
+.header__nav-link {
+  text-decoration: none;
+  position: relative;
 }
-.header__nav a::before {
-    content: "";
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--black);
-    transition: 0.2s;
-    transform: scaleX(0);
+.header__nav-link::before {
+  content: "";
+  top: 1.3em;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black);
+  transition: 0.2s;
+  transform: scaleX(0);
 }
-.header__nav a:hover:before {
-    transform: scaleX(1);
+.header__nav-link:hover:before {
+  transform: scaleX(1);
 }
-
-.header__lang {
-    margin-right: 4em;
+.header__lang-wrapper {
+  margin-right: 4em;
 }
 
 /* ABOUT US*/
 .about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: var(--grey);
+  background: url("../img/about-us/house-bg.webp") no-repeat center center;
+  background-size: cover;
+}
+.about-us__title {
+  width: auto;
+  margin-left: 28%;
+  margin-right: 28%;
+  font-size: 4.5em;
+  text-align: center;
+  color: var(--white);
+}
+.about-us__text {
+  width: auto;
+  margin-left: 27%;
+  margin-right: 27%;
+  font-family: "Montserrat-regular", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--white);
+}
+.about-us__button {
+  position: relative;
+  padding: 1em 2.2em;
+  border-radius: 4em;
+  border: none;
+  background: var(--white);
+  font-size: 1.1em;
+  text-align: center;
+  color: var(--black);
+  margin-top: 4em;
+}
+.about-us__button:hover {
+  cursor: pointer;
+}
+.about-us__button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about-us__button:before {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 1.1em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.about-us__button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+.about-us__button div {
+  font-size: 1.1em;
+  transition: all 0.3s ease-in-out;
+}
+/* concept */
+.concept {
+  background-color: var(--light-grey);
+}
+.concept__wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.concept__title-main {
+  width: auto;
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-bottom: 0;
+  margin-top: 3em;
+  font-size: 3em;
+  text-align: center;
+  color: var(--black);
+}
+.concept__subtitle-main {
+  width: auto;
+  margin-left: 27%;
+  margin-right: 27%;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-family: "Montserrat-Thin", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--grey);
+}
+.concept__wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.concept__project.concept__img,
+.concept__project.concept__title,
+.concept__project.concept__text {
+  grid-row: 2/3;
+}
+.concept__project.concept__title,
+.concept__project.concept__text,
+.concept__end.concept__title,
+.concept__end.concept__text {
+  grid-column: 1/2;
+}
+.concept__build.concept__img,
+.concept__build.concept__title,
+.concept__build.concept__text {
+  grid-row: 3/4;
+}
+.concept__build.concept__title,
+.concept__build.concept__text {
+  grid-column: 2/3;
+}
+.concept__end.concept__img,
+.concept__end.concept__title,
+.concept__end.concept__text {
+  grid-row: 4/5;
+}
+.concept__consult.concept__img,
+.concept__build.concept__img {
+  grid-column: 1/2;
+}
+.concept__project.concept__img,
+.concept__end.concept__img {
+  grid-column: 2/3;
+}
+.concept__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.concept__title {
+  width: auto;
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+.concept__text {
+  width: auto;
+  font-size: 1.5em;
+  font-family: "Montserrat-Regular", sans-serif;
+  margin: 0;
+  padding-top: 1.5em;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+.concept__img {
+  width: 100%;
+}
+
+/* PROJECTS */
+.projects {
+  height: 793px;
+  background-color: var(--grey);
+}
+.projects__title {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  color: var(--white);
+}
+
+/* WHY-WE */
+.why-we__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  margin-top: 2.6em;
+  margin-bottom: 1em;
+}
+.why-we__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.why-we__payment,
+.why-we__builders,
+.why-we__waranty {
+  width: 19em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.why-we__main {
+  font-size: 2em;
+  text-align: center;
+  font-family: "Montserrat-regular", sans-serif;
+  margin: 20px 0 0 0;
+}
+.why-we__text {
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "Montserrat-regular", sans-serif;
+  margin: 10px 0 0 0;
+  color: var(--grey);
+}
+/* MEDIA QUERIES */
+@media (max-width: 1125px) {
+  /* Header 1125px */
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/2;
+    margin: 0;
+  }
+  .header__lang-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+  .header__logo {
+    width: 4.5em;
+  }
+  .header__lang {
+    width: 1.5em;
+  }
+  .header__nav > a {
+    display: none;
+  }
+  /* About 1125px */
+  .about-us__title {
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 3.5em;
+  }
+  .about-us__text {
+    margin-right: 19%;
+    margin-left: 19%;
+    font-size: 1.2em;
+  }
+  .about-us__button {
+    font-size: 1.1em;
+    margin-top: 2em;
+  }
+  /* Concept 1125px */
+  .concept__title-main {
+    font-size: 2.5em;
+  }
+  .concept__subtitle-main {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2em;
+  }
+  .concept__title {
+    font-size: 2.5em;
+  }
+  .concept__text {
+    font-size: 1.2em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  /* Why-we 1125px */
+  .why-we__img {
+    width: 8em;
+  }
+  .why-we__main {
+    font-size: 1.8em;
+  }
+  .why-we__text {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 790px) {
+  /* Concept 790px */
+  .concept__title-main {
+    font-size: 2.2em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.8em;
+  }
+  .concept__title {
+    font-size: 2em;
+  }
+  .concept__text {
+    font-size: 1em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  /* Why-we 790px */
+  .why-we__title {
+    font-size: 3em;
+  }
+  .why-we__wrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
     align-items: center;
-    background: url("../img/house-bg.webp") no-repeat center center;
-    background-size: cover;
-}
-
-.about-us__title {
-    width: 23em;
-    font-size: 2.5em;
-    text-align: center;
-    color: var(--white);
-    margin-top: 3em;
-}
-
-.about-us__text {
-    width: 30em;
-    font-family: "Montserrat-regular", sans-serif;
+  }
+  .why-we__img {
+    width: 10em;
+  }
+  .why-we__img#margin {
+    margin-top: 8em;
+  }
+  .why-we__main {
+    font-size: 2em;
+  }
+  .why-we__text {
     font-size: 1.5em;
-    text-align: center;
-    color: var(--white);
+  }
 }
 
-.about-us__button {
-    width: 14em;
-    height: 3em;
-    border-radius: 4em;
-    border: none;
-    background: var(--white);
+@media (max-width: 620px) {
+  /* About 620px */
+  .about-us__title {
+    margin-right: 18%;
+    margin-left: 18%;
+    font-size: 3em;
+  }
+  .about-us__text {
+    margin-right: 17%;
+    margin-left: 17%;
+    font-size: 1em;
+  }
+  .about-us__button {
+    font-size: 1em;
+    margin-top: 1.2em;
+  }
+  /* Concept 620px */
+  .concept__title-main {
+    font-size: 1.8em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
     font-size: 1.2em;
-    text-align: center;
-    color: var(--black);
-    margin-top: 4em;
+  }
+  .concept__title {
+    font-size: 1.5em;
+  }
+  .concept__text {
+    font-size: 0.8em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  /* Why-we 620px */
+  .why-we__title {
+    font-size: 2.5em;
+  }
+  .why-we__img {
+    width: 8em;
+  }
+  .why-we__img#margin {
+    margin-top: 8em;
+  }
+  .why-we__main {
+    font-size: 1.5em;
+  }
+  .why-we__text {
+    font-size: 1em;
+  }
 }
 
-.about-us__button:hover {
-    cursor: pointer;
-    transition: 0.2s;
+@media (max-width: 530px) {
+  /* Header 530px */
+  .header__logo {
+    width: 3.5em;
+  }
+  /* About 530px */
+  .about-us__title {
+    font-size: 2.5em;
+  }
+  .about-us__text {
+    font-size: 1em;
+  }
+  .about-us__button {
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+  /* Concept 530px */
+  .concept__title-main {
+    font-size: 1.5em;
+  }
+  .concept__subtitle-main {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1em;
+  }
+  .concept__title {
+    font-size: 1.2em;
+  }
+  .concept__text {
+    font-size: 0.6em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 400px) {
+  /* About 400px */
+  .about-us__title {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1.5em;
+  }
+  .about-us__text {
+    margin-right: 4%;
+    margin-left: 4%;
+    font-size: 0.8em;
+  }
+  .about-us__button {
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+  /* Why-we 400px */
+  .why-we__title {
+    font-size: 2em;
+  }
+  .why-we__img {
+    width: 7em;
+  }
+  .why-we__img#margin {
+    margin-top: 7em;
+  }
+  .why-we__main {
+    font-size: 1.2em;
+  }
+  .why-we__text {
+    font-size: 0.8em;
+  }
 }
