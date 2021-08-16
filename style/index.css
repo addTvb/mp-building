@@ -170,8 +170,6 @@ html {
 }
 .concept__title-main {
   width: auto;
-  /* margin-left: 28%; */
-  /* margin-right: 28%; */
   margin-bottom: 0;
   margin-top: 3em;
   font-size: 3em;
@@ -288,13 +286,13 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.why-we__main {
+.why-we__text {
   font-size: 2em;
   text-align: center;
   font-family: "Montserrat-regular", sans-serif;
   margin: 20px 0 0 0;
 }
-.why-we__text {
+.why-we__subtext {
   font-size: 1.5em;
   text-align: center;
   font-family: "Montserrat-regular", sans-serif;
@@ -407,10 +405,10 @@ html {
   .why-we__img {
     width: 8em;
   }
-  .why-we__main {
+  .why-we__text {
     font-size: 1.8em;
   }
-  .why-we__text {
+  .why-we__subtext {
     font-size: 1.2em;
   }
 }
@@ -449,10 +447,10 @@ html {
   .why-we__img#margin {
     margin-top: 8em;
   }
-  .why-we__main {
+  .why-we__text {
     font-size: 2em;
   }
-  .why-we__text {
+  .why-we__subtext {
     font-size: 1.5em;
   }
 }
@@ -500,10 +498,10 @@ html {
   .why-we__img#margin {
     margin-top: 8em;
   }
-  .why-we__main {
+  .why-we__text {
     font-size: 1.5em;
   }
-  .why-we__text {
+  .why-we__subtext {
     font-size: 1em;
   }
 }
@@ -558,17 +556,20 @@ html {
 @media (max-width: 400px) {
   /* About 400px */
   .about-us__title {
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 1.5em;
+    margin: 0 5%;
+    font-size: 1.6em;
   }
   .about-us__text {
-    margin-right: 4%;
-    margin-left: 4%;
+    margin: 1em 15%;
     font-size: 0.8em;
   }
   .about-us__button {
     font-size: 0.8em;
+    margin-top: 1em;
+  }
+  /* Concept 400px */
+  .concept__title-main {
+    font-size: 1.5em;
     margin-top: 1em;
   }
   /* Why-we 400px */
@@ -581,10 +582,10 @@ html {
   .why-we__img#margin {
     margin-top: 7em;
   }
-  .why-we__main {
+  .why-we__text {
     font-size: 1.2em;
   }
-  .why-we__text {
+  .why-we__subtext {
     font-size: 0.8em;
   }
 }

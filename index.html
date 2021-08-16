@@ -1,343 +1,332 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="theme-color" content="#282828" />
+    <meta name="theme-color" content="#282828" />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- TODO Set real domain name
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- TODO Set real domain name
         <base href="https://example.com/page.html"> -->
-        <!-- TODO add page description -->
-        <meta
-            name="description"
-            content="'MP Building'- Строительство коттеджей и домов"
+    <!-- TODO add page description -->
+    <meta
+      name="description"
+      content="'MP Building'- Строительство коттеджей и домов"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="format-detection" content="phone=no" />
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
+    <!-- * Google -->
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="notranslate" />
+    <!-- * Geo placement -->
+    <meta name="geo.region" content="TM-S" />
+    <meta name="geo.placename" content="Ашхабад" />
+    <meta name="geo.position" content="37.940465;58.382349" />
+    <meta name="ICBM" content="37.940465, 58.382349" />
+    <link
+      rel="search"
+      href="helpers/open-search.xml"
+      type="application/opensearchdescription+xml"
+      title="MP build"
+    />
+    <!-- Apple browsers -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Icons -->
+    <!-- ! не нужно столько фавиконок подключать потом покажу как надо -->
+    <!-- <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/favicons/favicon.ico"
+    /> -->
+    <!-- <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicons/apple-icon-180x180.png"
+    /> -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/favicons/android-icon-192x192.png"
+    />
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicons/favicon-32x32.png"
+    /> -->
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/favicons/favicon-96x96.png"
+    /> -->
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicons/favicon-16x16.png"
+    /> -->
+    <!-- <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" /> -->
+    <!-- * Styles -->
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/burger.css" />
+    <title>MP Building</title>
+  </head>
+  <body>
+    <!-- * HEADER -->
+    <header class="header" id="header">
+      <div class="header__logo-wrapper">
+        <a href="#header">
+          <img
+            src="img/header/small-logo.svg"
+            class="header__logo"
+            alt="Логотип компании 'MP build'"
+            width="5.5em"
+          />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <a class="header__nav-link" href="#about-us">О компании</a>
+        <a class="header__nav-link" href="#concept">Концепция</a>
+        <a class="header__nav-link" href="#projects">Проекты</a>
+        <a class="header__nav-link" href="#why-we">Почему мы</a>
+        <a class="header__nav-link" href="#contacts">Контакты</a>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li>
+            <a class="menu__item" href="#about-us">О компании</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#concept">Концепция</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#projects">Проекты</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#why-we">Почему мы</a>
+          </li>
+          <li>
+            <a class="menu__item" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__lang-wrapper">
+        <a href="#">
+          <img
+            src="img/header/Language-logo.svg"
+            class="header__lang"
+            alt="Поменять язык сайта"
+          />
+        </a>
+      </div>
+    </header>
+    <!-- * About us container -->
+    <section class="about-us" id="about-us">
+      <h1 class="about-us__title">Строительство домов и коттеджей</h1>
+      <p class="about-us__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+        explicabo ea a beatae voluptatem minus tenetur perspiciatis quas
+        incidunt odit laudantium veniam possimus saepe voluptatibus unde totam
+        laborum iure consequuntur.
+      </p>
+      <a href="#contacts" class="about-us__button" data-hover="Спасибо!">
+        <div>Оставить заявку</div>
+      </a>
+    </section>
+    <!-- * concept container -->
+    <section class="concept" id="concept">
+      <div class="concept__wrapper-flex">
+        <h2 class="concept__title-main">Концепция</h2>
+        <p class="concept__subtitle-main">
+          Мы расскажем вам почему нужно работать именно с нами, и как это будет
+        </p>
+      </div>
+      <div class="concept__wrapper-grid">
+        <img
+          src="img/concept/conception_1.jpg"
+          alt="Консультация"
+          class="concept__consult concept__img"
+          width="720px"
+          loading="lazy"
         />
-        <meta name="robots" content="index,follow" />
-        <meta name="format-detection" content="phone=no" />
-        <meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
-        <!-- * Google -->
-        <meta name="googlebot" content="index,follow" />
-        <meta name="google" content="notranslate" />
-        <!-- * Geo placement -->
-        <meta name="geo.region" content="TM-S" />
-        <meta name="geo.placename" content="Ашхабад" />
-        <meta name="geo.position" content="37.940465;58.382349" />
-        <meta name="ICBM" content="37.940465, 58.382349" />
-        <link
-            rel="search"
-            href="helpers/open-search.xml"
-            type="application/opensearchdescription+xml"
-            title="MP build"
+        <div class="concept__consult concept__wrapper">
+          <h3 class="concept__consult concept__title">Консультация</h3>
+          <p class="concept__consult concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_2.jpg"
+          alt="Проектирование"
+          class="concept__project concept__img"
+          width="720px"
+          loading="lazy"
         />
-        <!-- Apple browsers -->
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <!-- Icons -->
-        <!-- ! не нужно столько фавиконок подключать потом покажу как надо -->
-        <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="img/favicons/favicon.ico"
+        <div class="concept__project concept__wrapper">
+          <h3 class="concept__project concept__title">Проектирование</h3>
+          <p class="concept__project concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_3.jpg"
+          alt="Строительство"
+          class="concept__build concept__img"
+          width="720px"
+          loading="lazy"
         />
-        <link
-            rel="apple-touch-icon"
-            sizes="57x57"
-            href="img/favicons/apple-icon-57x57.png"
+        <div class="concept__build concept__wrapper">
+          <h3 class="concept__build concept__title">Строительство</h3>
+          <p class="concept__build concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+        <img
+          src="img/concept/conception_4.jpg"
+          alt="Проектирование"
+          class="concept__end concept__img"
+          width="720px"
+          loading="lazy"
         />
-        <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="img/favicons/apple-icon-60x60.png"
+        <div class="concept__end concept__wrapper">
+          <h3 class="concept__end concept__title">Завершение проекта</h3>
+          <p class="concept__end concept__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis tincidunt ante, ut cursus libero. Maecenas vel commodo nulla.
+            Nam rhoncus arcu at vulputate scelerisque. Duis hendrerit quis ex
+            vel sollicitudin.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- * Projects container -->
+    <section class="projects" id="projects">
+      <h2 class="projects__title">ПРОЕКТЫ</h2>
+    </section>
+    <!-- * Why-we container -->
+    <section class="why-we" id="why-we">
+      <h2 class="why-we__title">Почему мы</h2>
+      <div class="why-we__wrapper">
+        <div class="why-we__payment">
+          <img
+            src="img/Why-we/payment.svg"
+            alt="Постоплатная система"
+            class="why-we__img"
+          />
+          <p class="why-we__text">Постоплатная система</p>
+          <p class="why-we__subtext">Платите только по факту принятых работ</p>
+        </div>
+        <div class="why-we__builders">
+          <img
+            src="img/Why-we/builders.svg"
+            alt="Опытные бригады строителей"
+            class="why-we__img"
+            id="margin"
+          />
+          <p class="why-we__text">Опытные бригады строителей</p>
+          <p class="why-we__subtext">
+            Профессиональные строители и опытные мастера
+          </p>
+        </div>
+        <div class="why-we__waranty">
+          <img
+            src="img/Why-we/waranty.svg"
+            alt="Гарантия 10 лет"
+            class="why-we__img"
+            id="margin"
+          />
+          <p class="why-we__text">Гарантия 10 лет</p>
+          <p class="why-we__subtext">
+            Строгое соблюдение гарантийных обязатеств на выполненные работы и
+            материалы
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact-us">
+      <!-- Объединить все title of sections в один класс -->
+      <h2 class="contact-us__title" id="contacts">Связаться с нами</h2>
+      <form netlify class="contact-us__form" name="contact-us">
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите имя"
+          class="contact-us__input"
         />
-        <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="img/favicons/apple-icon-72x72.png"
+        <input
+          type="email"
+          name="email"
+          placeholder="Введите Email"
+          class="contact-us__input"
         />
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="img/favicons/apple-icon-76x76.png"
+        <input
+          type="tel"
+          name="phone-number"
+          placeholder="Введите номер телефона"
+          class="contact-us__input"
         />
-        <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="img/favicons/apple-icon-114x114.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="img/favicons/apple-icon-120x120.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="img/favicons/apple-icon-144x144.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="img/favicons/apple-icon-152x152.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="img/favicons/apple-icon-180x180.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="192x192"
-            href="img/favicons/android-icon-192x192.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="img/favicons/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="img/favicons/favicon-96x96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="img/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <!-- * Styles -->
-        <link rel="stylesheet" href="style/normalize.css" />
-        <link rel="stylesheet" href="style/index.css" />
-        <link rel="stylesheet" href="style/burger.css" />
-        <title>MP Building</title>
-    </head>
-    <body>
-        <!-- * HEADER -->
-        <header class="header" id="header">
-            <div class="header__logo-wrapper">
-                <a href="#header">
-                    <img
-                        src="img/header/small-logo.svg"
-                        class="header__logo"
-                        alt="Логотип компании 'MP build'"
-                        width="5.5em"
-                    />
-                </a>
-            </div>
-            <nav class="header__nav">
-                <a class="header__nav-link" href="#about-us">О компании</a>
-                <a class="header__nav-link" href="#concept">Концепция</a>
-                <a class="header__nav-link" href="#projects">Проекты</a>
-                <a class="header__nav-link" href="#why-we">Почему мы</a>
-                <a class="header__nav-link" href="#contacts">Контакты</a>
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                    <span></span>
-                </label>
-                <ul class="menu__box">
-                    <li>
-                        <a class="menu__item" href="#about-us">О компании</a>
-                    </li>
-                    <li>
-                        <a class="menu__item" href="#concept">Концепция</a>
-                    </li>
-                    <li>
-                        <a class="menu__item" href="#projects">Проекты</a>
-                    </li>
-                    <li>
-                        <a class="menu__item" href="#why-we">Почему мы</a>
-                    </li>
-                    <li>
-                        <a class="menu__item" href="#contacts">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__lang-wrapper">
-                <a href="#">
-                    <img
-                        src="img/header/Language-logo.svg"
-                        class="header__lang"
-                        alt="Поменять язык сайта"
-                    />
-                </a>
-            </div>
-        </header>
-        <!-- * About us container -->
-        <section class="about-us" id="about-us">
-            <h1 class="about-us__title">Строительство домов и коттеджей</h1>
-            <p class="about-us__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat, explicabo ea a beatae voluptatem minus tenetur
-                perspiciatis quas incidunt odit laudantium veniam possimus saepe
-                voluptatibus unde totam laborum iure consequuntur.
-            </p>
-            <a href="#contacts" class="about-us__button" data-hover="Спасибо!">
-                <div>Оставить заявку</div>
-            </a>
-        </section>
-        <!-- * concept container -->
-        <section class="concept" id="concept">
-            <div class="concept__wrapper-flex">
-                <h2 class="concept__title-main">Концепция</h2>
-                <p class="concept__subtitle-main">
-                    Мы расскажем вам почему нужно работать именно с нами, и как
-                    это будет
-                </p>
-            </div>
-            <div class="concept__wrapper-grid">
-                <img
-                    src="img/concept/conception_1.jpg"
-                    alt="Консультация"
-                    class="concept__consult concept__img"
-                    width="720px"
-                    loading="lazy"
-                />
-                <div class="concept__consult concept__wrapper">
-                    <h3 class="concept__consult concept__title">
-                        Консультация
-                    </h3>
-                    <p class="concept__consult concept__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus quis tincidunt ante, ut cursus libero. Maecenas
-                        vel commodo nulla. Nam rhoncus arcu at vulputate
-                        scelerisque. Duis hendrerit quis ex vel sollicitudin.
-                    </p>
-                </div>
-                <img
-                    src="img/concept/conception_2.jpg"
-                    alt="Проектирование"
-                    class="concept__project concept__img"
-                    width="720px"
-                    loading="lazy"
-                />
-                <div class="concept__project concept__wrapper">
-                    <h3 class="concept__project concept__title">
-                        Проектирование
-                    </h3>
-                    <p class="concept__project concept__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus quis tincidunt ante, ut cursus libero. Maecenas
-                        vel commodo nulla. Nam rhoncus arcu at vulputate
-                        scelerisque. Duis hendrerit quis ex vel sollicitudin.
-                    </p>
-                </div>
-                <img
-                    src="img/concept/conception_3.jpg"
-                    alt="Строительство"
-                    class="concept__build concept__img"
-                    width="720px"
-                    loading="lazy"
-                />
-                <div class="concept__build concept__wrapper">
-                    <h3 class="concept__build concept__title">Строительство</h3>
-                    <p class="concept__build concept__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus quis tincidunt ante, ut cursus libero. Maecenas
-                        vel commodo nulla. Nam rhoncus arcu at vulputate
-                        scelerisque. Duis hendrerit quis ex vel sollicitudin.
-                    </p>
-                </div>
-                <img
-                    src="img/concept/conception_4.jpg"
-                    alt="Проектирование"
-                    class="concept__end concept__img"
-                    width="720px"
-                    loading="lazy"
-                />
-                <div class="concept__end concept__wrapper">
-                    <h3 class="concept__end concept__title">
-                        Завершение проекта
-                    </h3>
-                    <p class="concept__end concept__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus quis tincidunt ante, ut cursus libero. Maecenas
-                        vel commodo nulla. Nam rhoncus arcu at vulputate
-                        scelerisque. Duis hendrerit quis ex vel sollicitudin.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- * Projects container -->
-        <section class="projects" id="projects">
-            <h2 class="projects__title">ПРОЕКТЫ</h2>
-        </section>
-        <!-- * Why-we container -->
-        <section class="why-we" id="why-we">
-            <h2 class="why-we__title">Почему мы</h2>
-            <div class="why-we__wrapper">
-                <div class="why-we__payment">
-                    <img
-                        src="img/Why-we/payment.svg"
-                        alt="Постоплатная система"
-                        class="why-we__img"
-                    />
-                    <p class="why-we__main">Постоплатная система</p>
-                    <p class="why-we__text">
-                        Платите только по факту принятых работ
-                    </p>
-                </div>
-                <div class="why-we__builders">
-                    <img
-                        src="img/Why-we/builders.svg"
-                        alt="Опытные бригады строителей"
-                        class="why-we__img"
-                        id="margin"
-                    />
-                    <p class="why-we__main">Опытные бригады строителей</p>
-                    <p class="why-we__text">
-                        Профессиональные строители и опытные мастера
-                    </p>
-                </div>
-                <div class="why-we__waranty">
-                    <img
-                        src="img/Why-we/waranty.svg"
-                        alt="Гарантия 10 лет"
-                        class="why-we__img"
-                        id="margin"
-                    />
-                    <p class="why-we__main">Гарантия 10 лет</p>
-                    <p class="why-we__text">
-                        Строгое соблюдение гарантийных обязатеств на выполненные
-                        работы и материалы
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="contact-us">
-            <!-- Объединить все title of sections в один класс -->
-            <h2 class="contact-us__title" id="contacts">Связаться с нами</h2>
-            <form netlify class="contact-us__form" name="contact-us">
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Введите имя"
-                    class="contact-us__input"
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Введите Email"
-                    class="contact-us__input"
-                />
-                <input
-                    type="tel"
-                    name="phone-number"
-                    placeholder="Введите номер телефона"
-                    class="contact-us__input"
-                />
-                <button type="submit" class="contact-us__button">
-                    Отправить
-                </button>
-            </form>
-        </section>
-    </body>
-    <script src="js/burger.js"></script>
+        <button type="submit" class="contact-us__button">Отправить</button>
+      </form>
+    </section>
+  </body>
+  <script src="js/burger.js"></script>
 </html>
