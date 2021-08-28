@@ -20,7 +20,7 @@
   display: none;
 }
 .menu__btn > span {
-  display: flex;
+  display: block;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -75,7 +75,6 @@
   text-decoration: none;
   transition: 0.2s;
 }
-
 .menu__item {
   text-decoration: none;
   position: relative;
@@ -97,22 +96,39 @@
 
 /* MEDIA QUERIES BURGER MENU */
 @media (max-width: 1125px) {
-  .header__nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-  }
   .menu__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    margin-left: 30vw;
+    align-items: center;
+    z-index: 2;
     transition: 0.4s;
     cursor: pointer;
-    z-index: 2;
   }
 }
-
+@media (max-width: 790px) {
+  .menu__btn {
+    margin-left: 28vw;
+  }
+}
+@media (max-width: 620px) {
+  .menu__btn {
+    margin-left: 27vw;
+  }
+}
+@media (max-width: 530px) {
+  .menu__btn {
+    margin-left: 26vw;
+  }
+}
+@media (max-width: 400px) {
+  .menu__btn {
+    margin-left: 24vw;
+  }
+}
+@media (max-width: 320px) {
+  .menu__btn {
+    margin-left: 20vw;
+  }
+}

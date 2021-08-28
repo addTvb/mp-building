@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta name="theme-color" content="#282828" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- TODO Set real domain name
         <base href="https://example.com/page.html"> -->
@@ -35,84 +33,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- Icons -->
-    <!-- ! не нужно столько фавиконок подключать потом покажу как надо -->
-    <!-- <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="img/favicons/favicon.ico"
-    /> -->
-    <!-- <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="img/favicons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="img/favicons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="img/favicons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="img/favicons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="img/favicons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="img/favicons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="img/favicons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="img/favicons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/favicons/apple-icon-180x180.png"
-    /> -->
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
       href="img/favicons/android-icon-192x192.png"
     />
-    <!-- <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicons/favicon-32x32.png"
-    /> -->
-    <!-- <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="img/favicons/favicon-96x96.png"
-    /> -->
-    <!-- <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicons/favicon-16x16.png"
-    /> -->
-    <!-- <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" /> -->
     <!-- * Styles -->
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/index.css" />
@@ -122,53 +48,53 @@
   <body>
     <!-- * HEADER -->
     <header class="header" id="header">
-      <div class="header__logo-wrapper">
-        <a href="#header">
-          <img
-            src="img/header/small-logo.svg"
-            class="header__logo"
-            alt="Логотип компании 'MP build'"
-            width="5.5em"
-          />
-        </a>
-      </div>
       <nav class="header__nav">
         <a class="header__nav-link" href="#about-us">О компании</a>
         <a class="header__nav-link" href="#concept">Концепция</a>
         <a class="header__nav-link" href="#projects">Проекты</a>
+        <div class="header__logo-wrapper">
+          <a href="#header">
+            <img
+              src="img/header/small-logo.svg"
+              class="header__logo"
+              alt="Логотип компании 'MP building'"
+              width="5.5em"
+            />
+          </a>
+        </div>
         <a class="header__nav-link" href="#why-we">Почему мы</a>
         <a class="header__nav-link" href="#contacts">Контакты</a>
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-        <ul class="menu__box">
-          <li>
-            <a class="menu__item" href="#about-us">О компании</a>
-          </li>
-          <li>
-            <a class="menu__item" href="#concept">Концепция</a>
-          </li>
-          <li>
-            <a class="menu__item" href="#projects">Проекты</a>
-          </li>
-          <li>
-            <a class="menu__item" href="#why-we">Почему мы</a>
-          </li>
-          <li>
-            <a class="menu__item" href="#contacts">Контакты</a>
-          </li>
-        </ul>
+        <div class="header__lang-wrapper">
+          <a href="#">
+            <img
+              src="img/header/Language-logo.svg"
+              class="header__lang"
+              alt="Поменять язык сайта"
+            />
+          </a>
+        </div>
       </nav>
-      <div class="header__lang-wrapper">
-        <a href="#">
-          <img
-            src="img/header/Language-logo.svg"
-            class="header__lang"
-            alt="Поменять язык сайта"
-          />
-        </a>
-      </div>
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li>
+          <a class="menu__item" href="#about-us">О компании</a>
+        </li>
+        <li>
+          <a class="menu__item" href="#concept">Концепция</a>
+        </li>
+        <li>
+          <a class="menu__item" href="#projects">Проекты</a>
+        </li>
+        <li>
+          <a class="menu__item" href="#why-we">Почему мы</a>
+        </li>
+        <li>
+          <a class="menu__item" href="#contacts">Контакты</a>
+        </li>
+      </ul>
     </header>
     <!-- * About us container -->
     <section class="about-us" id="about-us">
@@ -345,5 +271,5 @@
       </form>
     </section>
   </body>
-  <script src="js/burger.js"></script>
+  <script type="text/javascript" src="js/burger.js"></script>
 </html>

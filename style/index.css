@@ -47,16 +47,13 @@ html {
   display: flex;
   align-items: center;
 }
-.header__logo-wrapper {
-  margin-left: 4em;
-}
 .header__logo {
   width: 5.5em;
 }
 .header__nav {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -64,7 +61,6 @@ html {
   cursor: pointer;
   color: var(--black);
   font-family: "Montserrat-regular", sans-serif;
-  margin-right: 3em;
   font-size: 1.5em;
   text-decoration: none;
   transition: 0.2s;
@@ -87,8 +83,8 @@ html {
 .header__nav-link:hover:before {
   transform: scaleX(1);
 }
-.header__lang-wrapper {
-  margin-right: 4em;
+#menu__toggle {
+  display: none;
 }
 
 /* ABOUT US*/
@@ -104,16 +100,12 @@ html {
 }
 .about-us__title {
   width: auto;
-  margin-left: 28%;
-  margin-right: 28%;
   font-size: 4.5em;
   text-align: center;
   color: var(--white);
 }
 .about-us__text {
   width: auto;
-  margin-left: 27%;
-  margin-right: 27%;
   font-family: "Montserrat-regular", sans-serif;
   font-size: 1.5em;
   text-align: center;
@@ -175,11 +167,8 @@ html {
   color: var(--black);
 }
 .concept__subtitle-main {
-  width: auto;
-  margin-left: 27%;
-  margin-right: 27%;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
+  width: 50%;
+  margin: 0.5em 0 2em 0;
   font-family: "Montserrat-Thin", sans-serif;
   font-size: 2.5em;
   text-align: center;
@@ -237,13 +226,11 @@ html {
   margin: 0;
 }
 .concept__text {
-  width: auto;
+  width: 40vw;
   font-size: 1.5em;
   font-family: "Montserrat-Regular", sans-serif;
-  margin: 0;
   padding-top: 1.5em;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin: 0;
 }
 .concept__img {
   width: 100%;
@@ -299,8 +286,6 @@ html {
 }
 
 /* CONTACT-US */
-/* .contact-us {
-} */
 .contact-us__title {
   font-size: 3em;
   text-align: center;
@@ -337,45 +322,32 @@ html {
   color: var(--white);
   transition: 0.2s;
 }
-
+.section {
+  text-align: center;
+  font-size: 3em;
+}
 /* MEDIA QUERIES */
 @media (max-width: 1125px) {
   /* Header 1125px */
-  .header {
+  .header__nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .header__nav-link {
+    display: none;
+  }
   .header__logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: 1/2;
-    margin: 0;
+    grid-column: 2/3;
+    justify-self: center;
   }
   .header__lang-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-  }
-  .header__logo {
-    width: 4.5em;
-  }
-  .header__lang {
-    width: 1.5em;
-  }
-  .header__nav > a {
-    display: none;
+    grid-column: 3/4;
   }
   /* About 1125px */
   .about-us__title {
-    margin-right: 20%;
-    margin-left: 20%;
     font-size: 3.5em;
   }
   .about-us__text {
-    margin-right: 19%;
-    margin-left: 19%;
     font-size: 1.2em;
   }
   .about-us__button {
@@ -387,17 +359,15 @@ html {
     font-size: 2.5em;
   }
   .concept__subtitle-main {
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 60%;
     font-size: 2em;
   }
   .concept__title {
     font-size: 2.5em;
   }
   .concept__text {
-    font-size: 1.2em;
-    margin-right: 20%;
-    margin-left: 20%;
+    width: 48vw;
+    font-size: 1.1em;
   }
   /* Why-we 1125px */
   .why-we__img {
@@ -410,24 +380,21 @@ html {
     font-size: 1.2em;
   }
 }
-
 @media (max-width: 790px) {
   /* Concept 790px */
   .concept__title-main {
     font-size: 2.2em;
   }
   .concept__subtitle-main {
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 70%;
     font-size: 1.8em;
   }
   .concept__title {
     font-size: 2em;
   }
   .concept__text {
-    font-size: 1em;
-    margin-right: 20%;
-    margin-left: 20%;
+    width: 45vw;
+    font-size: 0.8em;
   }
   /* Why-we 790px */
   .why-we__title {
@@ -456,13 +423,9 @@ html {
 @media (max-width: 620px) {
   /* About 620px */
   .about-us__title {
-    margin-right: 18%;
-    margin-left: 18%;
     font-size: 3em;
   }
   .about-us__text {
-    margin-right: 17%;
-    margin-left: 17%;
     font-size: 1em;
   }
   .about-us__button {
@@ -474,17 +437,14 @@ html {
     font-size: 1.8em;
   }
   .concept__subtitle-main {
-    margin-left: 15%;
-    margin-right: 15%;
     font-size: 1.2em;
   }
   .concept__title {
     font-size: 1.5em;
   }
   .concept__text {
-    font-size: 0.8em;
-    margin-right: 20%;
-    margin-left: 20%;
+    width: 40vw;
+    font-size: 0.6em;
   }
   /* Why-we 620px */
   .why-we__title {
@@ -505,10 +465,6 @@ html {
 }
 
 @media (max-width: 530px) {
-  /* Header 530px */
-  .header__logo {
-    width: 3.5em;
-  }
   /* About 530px */
   .about-us__title {
     font-size: 2.5em;
@@ -526,17 +482,14 @@ html {
     font-size: 1.5em;
   }
   .concept__subtitle-main {
-    margin-left: 15%;
-    margin-right: 15%;
     font-size: 1em;
   }
   .concept__title {
     font-size: 0.8em;
   }
   .concept__text {
+    width: 45vw;
     font-size: 0.5em;
-    margin-right: 20%;
-    margin-left: 20%;
   }
   /* Contact-us 530px */
   .contact-us__title {
@@ -554,11 +507,9 @@ html {
 @media (max-width: 400px) {
   /* About 400px */
   .about-us__title {
-    margin: 0 5%;
     font-size: 1.6em;
   }
   .about-us__text {
-    margin: 1em 15%;
     font-size: 0.8em;
   }
   .about-us__button {
@@ -569,6 +520,10 @@ html {
   .concept__title-main {
     font-size: 1.5em;
     margin-top: 1em;
+  }
+  .concept__text {
+    width: 45vw;
+    font-size: 0.4em;
   }
   /* Why-we 400px */
   .why-we__title {
